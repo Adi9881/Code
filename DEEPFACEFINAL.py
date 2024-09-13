@@ -13,14 +13,14 @@ face_matchaman = False
 face_matchdhruv = False
 face_matchrenesh = False
 reference_img = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_20_19_22_Pro.jpg")
-reference_img1 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_20_19_22_Pro.jpg")
-reference_img2 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_20_19_22_Pro.jpg")
-reference_img3 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_20_19_22_Pro.jpg")
-reference_img4 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_20_19_22_Pro.jpg")
+reference_img1 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_13_29_22_Pro.jpg")
+reference_img2 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_13_29_22_Pro.jpg")
+reference_img3 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_13_29_22_Pro.jpg")
+reference_img4 = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_13_29_22_Pro.jpg")
 def check_faceAdi(frame):
    global face_matchadi
    try :
-      if DeepFace.verify(frame, reference_img.copy())['verified'] :
+      if DeepFace.verify(frame, reference_img1.copy())['verified'] :
          face_matchadi = True
       else :
          face_matchadi = False
@@ -29,7 +29,7 @@ def check_faceAdi(frame):
 def check_faceRenesh(frame):
    global face_matchrenesh
    try :
-      if DeepFace.verify(frame, reference_img1.copy())['verified'] :
+      if DeepFace.verify(frame, reference_img.copy())['verified'] :
          face_matchrenesh = True
       else :
          face_matchrenesh = False
