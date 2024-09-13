@@ -10,7 +10,7 @@ cap.set(3, 1080)
 counter = 0
 key = 0
 face_match = False
-reference_img = cv.imread("C:\\Users\\adija\\Pictures\\Camera Roll\\WIN_20240913_13_29_22_Pro.jpg")# path = 'absolute path for folder with images goes here'
+reference_img = cv.imread("C:\\Users\\adija\\OneDrive\\Pictures\\Camera Roll\\WIN_20240913_20_19_22_Pro.jpg")# path = 'absolute path for folder with images goes here'
 # use os..join to connect folder and image paths and return list of image paths (ex. ImagePaths = [])
 # for imagepath in ImagePaths :
 # pillow1 = Image.open(imagepath)
@@ -24,7 +24,7 @@ def check_face(frame):
          face_match = False
    except ValueError :
       face_match = False
-while True :
+while key != 27 :
     ret, frame = cap.read()
     if ret : 
      if counter % 30 == 0 :
@@ -38,8 +38,7 @@ while True :
     else :
        cv.putText(frame, "NO MATCH!", (20, 450), cv.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 3)
     cv.imshow("Video", frame)
-    if key == ord("d"):
-        break
+    cv.waitKey(1)
 cv.destroyAllWindows()
 
 
