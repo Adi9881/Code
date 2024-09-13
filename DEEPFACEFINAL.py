@@ -29,7 +29,7 @@ def check_faceAdi(frame):
 def check_faceRenesh(frame):
    global face_matchrenesh
    try :
-      if DeepFace.verify(frame, reference_img.copy())['verified'] :
+      if DeepFace.verify(frame, reference_img1.copy())['verified'] :
          face_matchrenesh = True
       else :
          face_matchrenesh = False
@@ -38,7 +38,7 @@ def check_faceRenesh(frame):
 def check_faceJay(frame):
    global face_matchjay
    try :
-      if DeepFace.verify(frame, reference_img.copy())['verified'] :
+      if DeepFace.verify(frame, reference_img2.copy())['verified'] :
          face_matchjay = True
       else :
          face_matchjay = False
@@ -47,7 +47,7 @@ def check_faceJay(frame):
 def check_faceAman(frame):
    global face_matchaman
    try :
-      if DeepFace.verify(frame, reference_img.copy())['verified'] :
+      if DeepFace.verify(frame, reference_img3.copy())['verified'] :
          face_matchaman = True
       else :
          face_matchaman = False
@@ -56,7 +56,7 @@ def check_faceAman(frame):
 def check_faceDhruv(frame):
    global face_matchdhruv
    try :
-      if DeepFace.verify(frame, reference_img.copy())['verified'] :
+      if DeepFace.verify(frame, reference_img4.copy())['verified'] :
          face_matchdhruv = True
       else :
          face_matchdhruv = False
